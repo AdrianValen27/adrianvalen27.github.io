@@ -135,6 +135,12 @@ button:hover {
   background-color: #ffe88a;
 }
 
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
