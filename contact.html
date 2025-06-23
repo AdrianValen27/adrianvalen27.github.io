@@ -20,19 +20,12 @@
     </nav>
   </header>
 
-  <section>
+  <section class="contact-container">
     <h2>Contact Me</h2>
-    <form action="mailto:adrian.valen2002@gmail.com" method="post" enctype="text/plain">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send</button>
+    <form onsubmit="sendEmail(); return false;">
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+      <button type="submit">Send Email</button>
     </form>
   </section>
 
@@ -41,6 +34,7 @@
   </footer>
 
   <script>
+    // Header auto-hide on scroll
     let lastScroll = 0;
     const header = document.querySelector('header');
 
@@ -53,6 +47,17 @@
         }
         lastScroll = currentScroll;
     });
+
+    // Custom form submission handling
+    function sendEmail() {
+      const message = document.getElementById("message").value.trim();
+      if (message) {
+        const mailto = `mailto:adrian.valen2002@gmail.com?subject=Message from Portfolio&body=${encodeURIComponent(message)}`;
+        window.location.href = mailto;
+      } else {
+        alert("Please enter a message before sending.");
+      }
+    }
   </script>
 
 </body>
