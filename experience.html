@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Adrian Valencia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Adrian Valencia</h1>
+    <p>Software Engineer | System Administrator | Computer Security</p>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="courses.html">Courses</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Work Experience</h2>
+    <div class="card">
+      <h3>System Administrator - TeamLogic IT</h3>
+      <p>Maintained Linux and Windows servers, implemented security, and automated maintenance tasks.</p>
+    </div>
+    <div class="card">
+      <h3>Moderator - Hypixel Inc</h3>
+      <p>Developed moderation guidelines, collaborated with teams, and enhanced platform security.</p>
+    </div>
+    <div class="card">
+      <h3>Senior Software Engineer - Vective Inc</h3>
+      <p>Optimized performance, developed systems, and implemented distributed communication services.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Adrian Valencia. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll) {
+            header.classList.add('hide'); // scroll down
+        } else {
+            header.classList.remove('hide'); // scroll up
+        }
+        lastScroll = currentScroll;
+    });
+  </script>
+
+</body>
+</html>

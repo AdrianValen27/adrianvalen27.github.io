@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Adrian Valencia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Adrian Valencia</h1>
+    <p>Software Engineer | System Administrator | Computer Security</p>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="courses.html">Courses</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Distributed Messaging System</h3>
+      <p>Created a messaging system to enable communication between microservices.</p>
+    </div>
+    <div class="card">
+      <h3>Server Automation Scripts</h3>
+      <p>Automated routine server maintenance tasks with custom scripts.</p>
+    </div>
+    <!-- Future projects -->
+  </section>
+
+  <footer>
+    <p>© 2025 Adrian Valencia. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll) {
+            header.classList.add('hide'); // scroll down
+        } else {
+            header.classList.remove('hide'); // scroll up
+        }
+        lastScroll = currentScroll;
+    });
+  </script>
+
+</body>
+</html>
